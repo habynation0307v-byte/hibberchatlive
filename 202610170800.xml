@@ -1,0 +1,81 @@
+<battery_usage_stats custom_component_0="GPU" includes_proc_state_data="true" start_timestamp="1792202667166" end_timestamp="1792213200895" duration="10533729" battery_capacity="4557.0" discharge_pct="0" discharge_lower="0.0" discharge_upper="0.0" discharge_duration="10535087" battery_remaining="-1" charge_remaining="-1">
+<aggregate scope="0" power="0.0">
+<power_components>
+<component id="0" power="0.9118462919444444" duration="29860" model="1" />
+<component id="2" power="27.439710277777777" duration="10515940" model="1" />
+<component id="3" power="0.08035027777777777" duration="602" model="0" />
+<component id="8" power="9.81388888888889E-4" model="2" />
+<component id="9" power="0.5972441888297908" model="1" />
+<component id="12" power="1.9567779208333331" duration="435135" model="1" />
+<component id="16" power="8.675486056944445" duration="10535087" model="1" />
+<custom_component id="1000" power="9.816666666666667E-4" />
+</power_components>
+</aggregate>
+<aggregate scope="1" power="2.6343723874409015">
+<power_components>
+<component id="0" power="0.9118462919444444" duration="29860" model="1" />
+<component id="3" power="0.08035027777777777" duration="602" model="0" />
+<component id="9" power="0.5972441888297908" model="1" />
+<component id="12" power="0.5777899069444443" duration="128485" model="1" />
+</power_components>
+</aggregate>
+<uid uid="0" time_in_foreground="0" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="1.3789880138888888" duration="306650" model="1" />
+</power_components>
+</uid>
+<uid uid="1000" time_in_foreground="0" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="3" power="0.08035027777777777" duration="602" model="0" />
+<component id="9" power="0.5038054707692936" duration="21426524" model="1" />
+<component id="10" duration="122" model="0" />
+<component id="12" power="0.4485117480555555" duration="99737" model="1" />
+</power_components>
+</uid>
+<uid uid="10146" time_in_foreground="0" time_in_background="0" time_in_foreground_service="10535087">
+<power_components>
+<component id="9" power="0.09220242634182796" duration="1952522" model="1" />
+<component id="12" power="0.08064820166666666" duration="17934" model="1" />
+</power_components>
+</uid>
+<uid uid="1001" time_in_foreground="10535087" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="0.020281219444444443" duration="4510" model="1" />
+</power_components>
+</uid>
+<uid uid="10131" time_in_foreground="0" time_in_background="3653" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="0.010504862222222222" duration="2336" model="1" />
+</power_components>
+</uid>
+<uid uid="10145" time_in_foreground="0" time_in_background="2822" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="0.009362638333333333" duration="2082" model="1" />
+</power_components>
+</uid>
+<uid uid="10139" time_in_foreground="0" time_in_background="1324" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="0.005454793611111111" duration="1213" model="1" />
+</power_components>
+</uid>
+<uid uid="10153" time_in_foreground="0" time_in_background="329" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="0.0028600566666666665" duration="636" model="1" />
+</power_components>
+</uid>
+<uid uid="10181" time_in_foreground="37863" time_in_background="0" time_in_foreground_service="10497224">
+<power_components>
+<component id="9" power="0.0012362917186692357" duration="29671" model="1" />
+</power_components>
+</uid>
+<uid uid="10208" time_in_foreground="0" time_in_background="10530334" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="1.124236111111111E-4" duration="25" model="1" />
+</power_components>
+</uid>
+<uid uid="1002" time_in_foreground="10535087" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="12" power="5.396333333333333E-5" duration="12" model="1" />
+</power_components>
+</uid>
+</battery_usage_stats>

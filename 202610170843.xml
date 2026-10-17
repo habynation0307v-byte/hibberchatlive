@@ -1,0 +1,103 @@
+<battery_usage_stats custom_component_0="GPU" includes_proc_state_data="true" start_timestamp="1792215630850" end_timestamp="1792215805922" duration="175072" battery_capacity="4557.0" discharge_pct="0" discharge_lower="0.0" discharge_upper="0.0" discharge_duration="163966" battery_remaining="-1" charge_remaining="-1">
+<aggregate scope="0" power="18.0">
+<power_components>
+<component id="0" power="9.453288466111111" duration="105268" model="1" />
+<component id="2" power="0.2997127777777778" duration="96863" model="1" />
+<component id="8" power="5.061111111111111E-4" duration="65074" model="2" />
+<component id="9" power="0.06864007067269995" model="1" />
+<component id="10" power="0.40855675" model="0" />
+<component id="12" power="0.23037396694444442" duration="51229" model="1" />
+<component id="16" power="0.8152465649999999" duration="165725" model="1" />
+<custom_component id="1000" power="4.033333333333334E-4" />
+</power_components>
+</aggregate>
+<aggregate scope="1" power="0.7077724542838112">
+<power_components>
+<component id="0" power="9.453288466111111" duration="105268" model="1" />
+<component id="8" power="2.016666666666667E-4" duration="8044" model="2" />
+<component id="9" power="0.06864007067269995" model="1" />
+<component id="10" power="0.40855675" model="0" />
+<component id="12" power="0.0010342972222222222" duration="230" model="1" />
+</power_components>
+</aggregate>
+<uid uid="1000" time_in_foreground="11941" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="9" power="0.0045398228357953485" duration="261494" model="1" />
+<component id="10" power="0.23265500000000003" duration="30020" model="0" />
+<component id="12" power="5.711119444444444E-4" duration="127" model="1" />
+</power_components>
+</uid>
+<uid uid="0" time_in_foreground="0" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="1.0833333333333335E-5" duration="2098" model="2" />
+<component id="12" power="0.2293396697222222" duration="50999" model="1" />
+</power_components>
+</uid>
+<uid uid="1001" time_in_foreground="154634" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="1.4166666666666668E-5" model="2" />
+<component id="8" process_state="1" power="1.3888888888888891E-5" model="2" />
+<component id="10" power="0.17590175000000002" duration="22697" model="0" />
+<component id="12" power="4.6318527777777774E-4" duration="103" model="1" />
+</power_components>
+</uid>
+<uid uid="10146" time_in_foreground="0" time_in_background="119910" time_in_foreground_service="23122">
+<power_components>
+<component id="8" power="5.861111111111112E-5" duration="5946" model="2" />
+<component id="8" process_state="2" power="4.75E-5" model="2" />
+<component id="8" process_state="3" power="8.333333333333334E-6" model="2" />
+<component id="8" process_state="4" power="2.5E-6" model="2" />
+<component id="9" power="0.06330409500515088" duration="25599" model="1" />
+</power_components>
+</uid>
+<uid uid="10215" time_in_foreground="0" time_in_background="394" time_in_foreground_service="0">
+<power_components>
+<component id="9" power="5.272361449897289E-4" duration="11165" model="1" />
+</power_components>
+</uid>
+<uid uid="10181" time_in_foreground="107700" time_in_background="0" time_in_foreground_service="46599">
+<power_components>
+<component id="9" power="2.6891668676398695E-4" duration="6454" model="1" />
+</power_components>
+</uid>
+<uid uid="10240" time_in_foreground="23122" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="3.472222222222223E-5" model="2" />
+<component id="8" process_state="1" power="3.416666666666667E-5" model="2" />
+<component id="8" process_state="4" power="2.777777777777778E-7" model="2" />
+</power_components>
+</uid>
+<uid uid="10145" time_in_foreground="0" time_in_background="3112" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="3.444444444444445E-5" model="2" />
+<component id="8" process_state="2" power="5.555555555555556E-6" model="2" />
+<component id="8" process_state="4" power="2.8611111111111113E-5" model="2" />
+</power_components>
+</uid>
+<uid uid="10208" time_in_foreground="0" time_in_background="2953" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="2.666666666666667E-5" model="2" />
+<component id="8" process_state="2" power="1.388888888888889E-6" model="2" />
+<component id="8" process_state="4" power="2.3611111111111114E-5" model="2" />
+</power_components>
+</uid>
+<uid uid="10088" time_in_foreground="0" time_in_background="20283" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="1.0277777777777779E-5" model="2" />
+<component id="8" process_state="2" power="9.722222222222223E-6" model="2" />
+<component id="8" process_state="4" power="2.777777777777778E-7" model="2" />
+</power_components>
+</uid>
+<uid uid="10080" time_in_foreground="144841" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="8.333333333333334E-6" model="2" />
+<component id="8" process_state="1" power="8.055555555555557E-6" model="2" />
+</power_components>
+</uid>
+<uid uid="10069" time_in_foreground="31238" time_in_background="0" time_in_foreground_service="0">
+<power_components>
+<component id="8" power="3.6111111111111115E-6" model="2" />
+<component id="8" process_state="1" power="3.3333333333333337E-6" model="2" />
+</power_components>
+</uid>
+</battery_usage_stats>
