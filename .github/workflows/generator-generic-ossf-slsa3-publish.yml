@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEETCHAT - Chati Na Wazungu Tanzania Ulipwe</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif; background:#f0fdf4}</style>
+</head>
+<body class="pb-20">
+<header class="bg-[#0a3d1f] text-white px-4 py-4">
+  <div class="flex justify-between items-center">
+    <div><h1 class="font-extrabold text-2xl tracking-wider">MEETCHAT</h1><p class="text-[11px] text-green-200 -mt-1">Share your country's vibe</p></div>
+    <div class="flex gap-3"><div class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center">👤</div><div class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center">☰</div></div>
+  </div>
+  <div class="flex gap-2 mt-4">
+    <div class="flex-1 bg-[#0f5132] rounded-full px-3 py-2 flex items-center gap-2 text-sm border border-green-700"><span class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span> <span id="liveCount">2,728 Live</span></div>
+    <a href="https://wa.me/255770096368?text=NIFUNZE" class="bg-[#a3f3c0] text-[#0a3d1f] rounded-full px-4 py-2 text-sm font-bold">📁 WITHDRAWAL</a>
+  </div>
+  <div class="flex gap-2 mt-2">
+    <div class="flex-1 bg-black/30 rounded-full px-4 py-2.5 flex items-center gap-2 border border-white/10"><span>👁️</span><div><p class="text-[10px] text-white/60">BALANCE</p><p class="font-bold -mt-1">0.00 TZS</p></div></div>
+    <a href="https://wa.me/255770096368?text=NIFUNZE" class="flex-1 bg-[#a3f3c0] text-[#0a3d1f] rounded-full px-4 py-2.5 text-sm font-bold text-center">📲 INSTALL APP</a>
+  </div>
+</header>
+<section class="text-center px-5 py-8 bg-[#f0fdf4]">
+  <h2 class="text-[28px] font-extrabold leading-tight text-[#0a2f1a]">MEETCHAT: <span class="text-green-700">Chati Na Wazungu</span> Tanzania Ulipwe</h2>
+  <p class="text-gray-500 mt-3 text-[15px]">Wasiliana na wageni kutoka sehemu mbalimbali duniani, shiriki utamaduni wako, na ulipwe kwa muda unaotumia kuchati.</p>
+  <div class="mt-6 flex flex-col gap-3 items-center">
+    <a href="https://wa.me/255770096368?text=NIFUNZE" class="bg-[#22c55e] text-white font-bold rounded-full px-8 py-3 shadow-lg w-full max-w-[300px]">👉 Gusa hapa kujisajili sasa</a>
+    <a href="https://wa.me/255770096368?text=NIFUNZE" class="bg-[#0a3d1f] text-white font-bold rounded-full px-8 py-3 shadow-lg w-full max-w-[300px]">🚀 Fungua Akaunti Hapa</a>
+  </div>
+</section>
+<section class="px-4">
+  <div class="bg-white rounded-[20px] shadow-xl p-4 border border-green-50">
+    <div class="flex justify-between items-start"><div class="flex gap-3"><img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-14 h-14 rounded-full"><div><p class="font-bold text-lg">Amelia 🇸🇪 <span class="text-green-600 text-sm">● Online • 4.9</span></p><p class="text-xs text-gray-400">19/Oct/2026</p></div></div><span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Online</span></div>
+    <div class="grid grid-cols-2 gap-3 mt-4"><div class="bg-gray-50 rounded-xl p-3"><p class="text-[11px] text-gray-500 font-bold">CHAT DURATION</p><p class="font-bold">⏰ 45 Minutes</p></div><div class="bg-gray-50 rounded-xl p-3"><p class="text-[11px] text-gray-500 font-bold">TOPIC</p><p class="font-bold text-sm">🍱 Chakula cha Kiafrika</p></div></div>
+    <div class="bg-[#15803d] text-white text-center py-3 rounded-xl font-extrabold text-lg mt-4">TZS 45,500</div>
+    <a href="https://wa.me/255770096368?text=NIFUNZE" class="mt-3 border-2 border-gray-200 rounded-xl py-2.5 flex justify-center font-bold">💬 START CHAT - +255 770 096 368</a>
+    <a href="https://wa.me/255770096368?text=NIFUNZE" class="mt-3 bg-green-600 text-white rounded-full py-2.5 flex justify-center gap-2 font-bold">⬇️ Download meetchat App</a>
+  </div>
+</section>
+<section class="px-4 mt-8"><h3 class="font-extrabold text-center text-[#0a3d1f] mb-4">Watu Tanzania Wanalipwa Live 🔥</h3>
+<div class="space-y-3">
+<div class="bg-white rounded-2xl p-4 shadow-sm border"><div class="flex justify-between"><div><p class="font-bold">Emmanuel Petro</p><p class="text-green-700 text-xs">Morogoro</p></div><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">+40,000 TZS</span></div><p class="text-sm text-gray-600 mt-2">"Nimetoa pesa zangu nikiwa hapa Morogoro. Mfumo wao wa utoaji pesa uko wazi na salama."</p></div>
+<div class="bg-white rounded-2xl p-4 shadow-sm border"><div class="flex justify-between"><div><p class="font-bold">Grace Mwakyusa</p><p class="text-green-700 text-xs">Kilimanjaro</p></div><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">+60,000 TZS</span></div><p class="text-sm text-gray-600 mt-2">"Greetings from Kilimanjaro! Nimetoa malipo yangu leo mchana bila usumbufu."</p></div>
+<div class="bg-white rounded-2xl p-4 shadow-sm border"><div class="flex justify-between"><div><p class="font-bold">Rashid Selemani</p><p class="text-green-700 text-xs">Zanzibar</p></div><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">+48,000 TZS</span></div><p class="text-sm text-gray-600 mt-2">"Hapa Zanzibar mambo ni safi sana. Nimetoa kiasi changu cha asubuhi ya leo."</p></div>
+</div></section>
+<div class="px-6 py-10 text-center"><div class="bg-[#0a3d1f] rounded-[24px] p-6 text-white"><h3 class="font-extrabold text-xl">💸📱 Instagram | Facebook | TikTok | YouTube | WhatsApp 👉<br>Ukiitumia vizuri unaweza kutengeneza 30k kwa siku! 🔥</h3><p class="mt-3 text-green-200">Nicheki WhatsApp sasa: +255 770 096 368<br>Andika: NIFUNZE ✅</p><a href="https://wa.me/255770096368?text=NIFUNZE" class="mt-5 inline-block bg-[#22c55e] text-white font-extrabold rounded-full px-10 py-4 text-lg">Chat WhatsApp Sasa 🚀</a></div></div>
+<a href="https://wa.me/255770096368?text=NIFUNZE" class="fixed bottom-6 right-5 bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl text-3xl">💬</a>
+<script>let live=2728; setInterval(()=>{live+=Math.floor(Math.random()*3)-1; document.getElementById('liveCount').innerText=live.toLocaleString()+' Live'},3000);</script>
+</body></html>
