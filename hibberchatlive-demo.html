@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#063d32">
+<title>HibberChatLive — Chat, Learn & Connect</title>
+<style>
+:root{--deep:#073b30;--deep2:#04271f;--green:#079b73;--mint:#d9f8e9;--bg:#f0fff7;--ink:#172b28;--muted:#647875;--line:#d8eee4;--violet:#7757d8}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input{font:inherit}button{cursor:pointer}
+header{background:linear-gradient(125deg,var(--deep2),var(--deep),#08724f);color:white;padding:20px 18px 18px;box-shadow:0 10px 30px #043d3026}
+.top{max-width:980px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:25px;font-weight:900;font-style:italic;letter-spacing:.3px}.tag{font-size:12px;color:#b9f4dc;font-weight:650}.top-actions{display:flex;gap:8px}.top-actions button{background:#ffffff18;color:white;border:1px solid #ffffff35;border-radius:14px;padding:11px 13px}
+.stats{max-width:980px;margin:18px auto 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}.pill{border:1px solid #3bc49a;border-radius:99px;padding:8px 13px;color:#c8ffe8;font-weight:750;font-size:13px}.balance{background:#022c21;border:1px solid #145744;border-radius:18px;padding:10px 14px;min-width:160px;flex:1}.balance small{display:block;color:#9ee7cc;letter-spacing:1px;font-weight:800}.balance strong{font-size:18px}.header-cta{background:#08a879;color:white;border:0;border-radius:99px;padding:12px 15px;font-weight:850}
+main{max-width:980px;margin:auto;padding:25px 15px 40px}.hero{text-align:center;padding:22px 8px 26px}.eyebrow{display:inline-block;background:#e0f8ec;color:#087c5d;border:1px solid #c8eddd;padding:7px 12px;border-radius:99px;font-weight:800;font-size:12px}.hero h1{font-size:clamp(27px,5vw,43px);line-height:1.15;margin:17px auto 12px;max-width:760px;letter-spacing:-1px}.hero h1 span{color:var(--green)}.hero p{color:var(--muted);font-size:16px;line-height:1.65;max-width:700px;margin:0 auto 20px}.btn{border:0;border-radius:15px;padding:14px 18px;font-weight:850;box-shadow:0 8px 20px #07845c26}.btn-primary{background:linear-gradient(100deg,#08b987,#078360);color:white}.btn-dark{background:var(--deep);color:white}.btn-outline{background:white;border:1.5px solid #0a9870;color:#087c5d}.hero-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:15px 0}.section-head h2{margin:0;font-size:22px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.person{background:white;border:1px solid var(--line);border-left:5px solid var(--green);border-radius:24px;padding:17px;box-shadow:0 8px 24px #104d3810}.person-top{display:flex;gap:12px;align-items:center}.avatar{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;font-size:28px;background:linear-gradient(135deg,#d3f7e7,#e8e3ff);border:2px solid #2bb68b;flex-shrink:0}.person h3{margin:0;font-size:18px}.sub{color:#078b68;font-weight:750;font-size:13px}.ai-tag{display:inline-block;margin-top:4px;background:#eee9ff;color:#6043b8;border-radius:7px;padding:3px 7px;font-size:10px;font-weight:900}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:16px 0}.info{background:#f7faf9;border:1px solid #e5eeeb;border-radius:15px;padding:11px}.info small{display:block;color:#60736e;font-size:10px;font-weight:900;letter-spacing:.6px}.info strong{display:block;margin-top:4px;font-size:14px;line-height:1.35}.price{background:linear-gradient(100deg,#079d73,#087454);color:white;text-align:center;padding:13px;border-radius:14px;font-size:22px;font-weight:900}.price-note{text-align:center;color:var(--muted);font-size:12px;margin:5px 0 12px}.person .btn{width:100%;padding:12px}.disclaimer{font-size:12px;line-height:1.5;color:#62736e;margin:14px 2px}
+.how{margin-top:30px;background:white;border:1px solid var(--line);border-radius:24px;padding:20px}.how h2{margin:0 0 12px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{background:#f4fbf7;border-radius:15px;padding:13px}.step b{display:block;margin-bottom:5px}.step span{font-size:13px;color:var(--muted);line-height:1.4}
+footer{background:#03271f;color:#b9e8d5;padding:25px 18px;text-align:center;font-size:13px}footer strong{font-size:20px;color:white;font-style:italic}.footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:14px 0}footer a{color:#6be0b5}
+.modal{display:none;position:fixed;inset:0;z-index:20;background:#031c17b8;backdrop-filter:blur(5px);padding:16px;align-items:center;justify-content:center}.modal.show{display:flex}.panel{width:min(100%,560px);max-height:88vh;overflow:auto;background:white;border-radius:26px;padding:20px;box-shadow:0 20px 70px #001d16aa}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.panel-head h2{margin:0;font-size:22px}.close{border:0;background:#eef6f2;border-radius:12px;padding:8px 12px;font-size:20px}.chat-intro{color:var(--muted);font-size:13px;line-height:1.5}.chatbox{height:290px;overflow:auto;background:#f4faf7;border:1px solid var(--line);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:10px}.bubble{max-width:88%;padding:11px 13px;border-radius:16px;line-height:1.45;font-size:14px;white-space:pre-wrap}.bot{background:white;border:1px solid #dcece4;align-self:flex-start;border-bottom-left-radius:5px}.user{background:#087f5e;color:white;align-self:flex-end;border-bottom-right-radius:5px}.chat-form{display:flex;gap:8px;margin-top:10px}.chat-form input{min-width:0;flex:1;border:1px solid #cde5d9;border-radius:14px;padding:12px;outline-color:#079b73}.chat-form button{border:0;border-radius:14px;background:var(--green);color:white;font-weight:850;padding:0 16px}.chat-note{font-size:11px;color:var(--muted);margin-top:9px;line-height:1.45}.modal-actions{display:flex;flex-direction:column;gap:10px;margin-top:15px}.modal-actions .btn{width:100%}.form-field{display:block;margin:13px 0;font-weight:750;font-size:14px}.form-field input{display:block;width:100%;margin-top:6px;padding:13px;border:1px solid #d2e8dd;border-radius:13px;background:#fbfefc}.hidden{display:none!important}
+@media(max-width:650px){.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.brand{font-size:22px}.stats{margin-top:14px}.hero{padding-top:18px}.section-head h2{font-size:20px}.person{padding:15px}.top-actions button{padding:9px 10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <div><div class="brand">HIBBERCHATLIVE</div><div class="tag">Chat • Learn • Connect</div></div>
+    <div class="top-actions"><button onclick="openAccount()">👤</button><button onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">☰</button></div>
+  </div>
+  <div class="stats">
+    <span class="pill">✦ AI CHAT DEMO</span>
+    <div class="balance"><small>DEMO STATUS</small><strong>AI preview available</strong></div>
+    <button class="header-cta" onclick="goRegister()">💸 JISAJILI KUPATA MALIPO</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <span class="eyebrow">🌍 Kutana na tamaduni mpya</span>
+    <h1>HIBBERCHATLIVE: <span>Chat na AI</span>, jifunze na ungana na dunia</h1>
+    <p>Jaribu mazungumzo ya mfano na wasaidizi wa AI kuhusu chakula, muziki, safari na maisha ya kila siku. Ukipenda kuendelea, unaweza kufungua ukurasa wa usajili wa Moxera.</p>
+    <div class="hero-buttons">
+      <button class="btn btn-primary" onclick="document.getElementById('people').scrollIntoView({behavior:'smooth'})">💬 Anza Demo ya Chat</button>
+      <button class="btn btn-dark" onclick="goRegister()">💸 Jisajili kupata malipo</button>
+    </div>
+  </section>
+  <div class="section-head" id="people"><div><h2>Chagua mada ya mazungumzo</h2><p>Wasifu hapa ni wahusika wa AI wa mfano, si watu halisi.</p></div></div>
+  <section class="cards">
+    <article class="person">
+      <div class="person-top"><div class="avatar">👩🏻‍💻</div><div><h3>Amelia 🇸🇪</h3><div class="sub">AI Demo • Sweden</div><span class="ai-tag">AI CHAT DEMO</span></div></div>
+      <div class="info-grid"><div class="info"><small>MUDA WA DEMO</small><strong>⏱ Dakika 45</strong></div><div class="info"><small>MADA</small><strong>🍲 Chakula na tamaduni</strong></div></div>
+      <div class="price">TZS 45,000</div><div class="price-note">Bei ya mfano tu — hakuna malipo yanayochakatwa</div>
+      <button class="btn btn-outline" onclick="startChat('Amelia','Chakula na tamaduni')">💬 START CHAT</button>
+    </article>
+    <article class="person">
+      <div class="person-top"><div class="avatar">🧑🏻‍🎨</div><div><h3>Oliver 🇬🇧</h3><div class="sub">AI Demo • United Kingdom</div><span class="ai-tag">AI CHAT DEMO</span></div></div>
+      <div class="info-grid"><div class="info"><small>MUDA WA DEMO</small><strong>⏱ Dakika 30</strong></div><div class="info"><small>MADA</small><strong>🎵 Muziki na burudani</strong></div></div>
+      <div class="price">TZS 25,000</div><div class="price-note">Bei ya mfano tu — hakuna malipo yanayochakatwa</div>
+      <button class="btn btn-outline" onclick="startChat('Oliver','Muziki na burudani')">💬 START CHAT</button>
+    </article>
+    <article class="person">
+      <div class="person-top"><div class="avatar">👩🏽‍🚀</div><div><h3>Sofia 🇨🇦</h3><div class="sub">AI Demo • Canada</div><span class="ai-tag">AI CHAT DEMO</span></div></div>
+      <div class="info-grid"><div class="info"><small>MUDA WA DEMO</small><strong>⏱ Dakika 60</strong></div><div class="info"><small>MADA</small><strong>✈️ Safari na maeneo</strong></div></div>
+      <div class="price">TZS 70,000</div><div class="price-note">Bei ya mfano tu — hakuna malipo yanayochakatwa</div>
+      <button class="btn btn-outline" onclick="startChat('Sofia','Safari na maeneo')">💬 START CHAT</button>
+    </article>
+    <article class="person">
+      <div class="person-top"><div class="avatar">🧑🏽‍🎤</div><div><h3>Liam 🇺🇸</h3><div class="sub">AI Demo • United States</div><span class="ai-tag">AI CHAT DEMO</span></div></div>
+      <div class="info-grid"><div class="info"><small>MUDA WA DEMO</small><strong>⏱ Dakika 30</strong></div><div class="info"><small>MADA</small><strong>🗣 Kiingereza cha kila siku</strong></div></div>
+      <div class="price">TZS 35,000</div><div class="price-note">Bei ya mfano tu — hakuna malipo yanayochakatwa</div>
+      <button class="btn btn-outline" onclick="startChat('Liam','Kiingereza cha kila siku')">💬 START CHAT</button>
+    </article>
+  </section>
+  <p class="disclaimer">Uwazi: Majina, nchi, bei na muda ni mifano ya muonekano wa demo. Hakuna watu halisi waliounganishwa, akaunti, malipo au mapato yanayothibitishwa na ukurasa huu. Chat ya sasa hutumia majibu ya mfano yaliyowekwa ndani ya ukurasa; AI halisi inahitaji kuunganishwa na huduma ya AI kupitia backend salama.</p>
+  <section class="how" id="how"><h2>ℹ️ Jinsi HibberChatLive inavyofanya kazi</h2><div class="steps"><div class="step"><b>1. Chagua mada</b><span>Chagua mmoja wa wahusika wa AI wa mfano na mada unayopenda.</span></div><div class="step"><b>2. Jaribu chat</b><span>Andika ujumbe na ujaribu mazungumzo ya demo bila kulipa.</span></div><div class="step"><b>3. Fungua usajili</b><span>Ukitaka, nenda kwenye tovuti ya Moxera na usome masharti yake kabla ya kujiunga.</span></div></div><div class="modal-actions"><button class="btn btn-primary" onclick="goRegister()">💸 JISAJILI KUPATA MALIPO</button></div><p class="disclaimer">Kitufe hiki kinaelekeza kwenye tovuti ya Moxera Agencies. Hakihakikishi mapato au malipo; soma ada, masharti na sera za tovuti kabla ya kujisajili.</p></section>
+</main>
+<footer><strong>HIBBERCHATLIVE</strong><div>Chat • Learn • Connect</div><div class="footer-links"><a href="#people">AI Chat Demo</a><a href="#how">Jinsi inavyofanya kazi</a><a href="https://wa.me/255770096368">Customer Service</a></div><div>© 2026 HibberChatLive</div></footer>
+<div class="modal" id="chatModal" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+  <div class="panel">
+    <div class="panel-head"><h2 id="chatTitle">AI Chat Demo</h2><button class="close" onclick="closeChat()" aria-label="Funga">×</button></div>
+    <p class="chat-intro" id="chatIntro">Haya ni mazungumzo ya mfano na AI, si mtu halisi.</p>
+    <div class="chatbox" id="chatbox"><div class="bubble bot">Habari! Karibu kwenye HibberChatLive AI Demo. Ungependa kuzungumza kuhusu nini?</div></div>
+    <form class="chat-form" id="chatForm"><input id="chatInput" autocomplete="off" placeholder="Andika ujumbe wako..." maxlength="500" required><button type="submit">Tuma</button></form>
+    <div class="chat-note">Demo hii hutumia majibu ya mfano yaliyowekwa ndani ya ukurasa. Haijaunganishwa na huduma ya AI ya moja kwa moja, na haifanyi malipo.</div>
+    <div class="modal-actions"><button class="btn btn-primary" onclick="goRegister()">💸 Jisajili kupata malipo</button><button class="btn btn-outline" onclick="closeChat()">Endelea kuangalia demo</button></div>
+  </div>
+</div>
+<div class="modal" id="accountModal" role="dialog" aria-modal="true">
+  <div class="panel"><div class="panel-head"><h2>Akaunti ya HibberChatLive</h2><button class="close" onclick="closeAccount()">×</button></div><p class="chat-intro">Akaunti halisi bado haijaunganishwa. Kitufe cha usajili kinakupeleka kwenye tovuti ya Moxera.</p><div class="modal-actions"><button class="btn btn-primary" onclick="goRegister()">💸 Jisajili kupata malipo</button><button class="btn btn-outline" onclick="closeAccount()">Funga</button></div></div>
+</div>
+<script>
+const REGISTER_URL='https://moxeraagencies.com/register?ref=Mbikiye';
+function goRegister(){window.location.href=REGISTER_URL}
+function openAccount(){document.getElementById('accountModal').classList.add('show')}
+function closeAccount(){document.getElementById('accountModal').classList.remove('show')}
+let currentName='AI', currentTopic='mazungumzo ya kawaida', turnCount=0;
+function startChat(name,topic){
+ currentName=name;currentTopic=topic;turnCount=0;
+ document.getElementById('chatTitle').textContent='Chat na '+name+' • AI Demo';
+ document.getElementById('chatIntro').textContent='Mada: '+topic+'. Huyu ni mhusika wa AI wa mfano, si mtu halisi.';
+ const box=document.getElementById('chatbox');box.innerHTML='';
+ addBubble('Habari! Mimi ni '+name+', msaidizi wa AI wa demo. Tunaweza kuzungumza kuhusu '+topic+'. Una swali gani?', 'bot');
+ document.getElementById('chatModal').classList.add('show');
+ setTimeout(()=>document.getElementById('chatInput').focus(),100);
+}
+function closeChat(){document.getElementById('chatModal').classList.remove('show')}
+function addBubble(text,who){const b=document.createElement('div');b.className='bubble '+who;b.textContent=text;const box=document.getElementById('chatbox');box.appendChild(b);box.scrollTop=box.scrollHeight}
+function demoReply(msg){
+ const s=msg.toLowerCase();
+ if(/hello|hi|hey|habari|mambo|hujambo/.test(s))return 'Habari nzuri! 😊 Nafurahi kuzungumza nawe. Siku yako inaendeleaje?';
+ if(/food|chakula|eat|mapishi|ugali/.test(s))return 'Chakula ni njia nzuri ya kujifunza utamaduni! Ni chakula gani kinachopendwa sana eneo lako, na kwa nini?';
+ if(/music|muziki|song|wimbo|kompa/.test(s))return 'Muziki huunganisha watu kutoka nchi tofauti. 🎵 Unapenda aina gani ya muziki, na ni msanii gani unayemsikiliza sana?';
+ if(/travel|safari|country|nchi|visit/.test(s))return 'Safari ni njia nzuri ya kuona dunia. ✈️ Ni nchi gani ungependa kutembelea kwanza, na ungependa kuona nini huko?';
+ if(/english|kiingereza|learn|kujifunza/.test(s))return 'Tunaweza kufanya mazoezi ya Kiingereza! Jaribu kuniambia kwa Kiingereza jambo moja ulilofanya leo, nami nitakusaidia kwa mfano.';
+ if(/topic|mada|talk|zungum/.test(s))return 'Tunaweza kuzungumza kuhusu chakula, muziki, safari, michezo au maisha ya kila siku. Ni mada ipi unayoipenda zaidi?';
+ const replies=[
+ 'Hilo ni wazo zuri. Unaweza kuniambia zaidi kuhusu hilo? 😊',
+ 'Nimekuelewa! Je, hilo lina umuhimu gani kwako?',
+ 'Hiyo inavutia. Unadhani watu wa nchi nyingine wanaweza kujifunza nini kutokana na uzoefu huo?',
+ 'Asante kwa kushiriki! Hebu tuendelee na mada ya '+currentTopic+'. Una mfano mmoja unaoweza kueleza?'
+ ];
+ return replies[turnCount%replies.length];
+}
+document.getElementById('chatForm').addEventListener('submit',function(e){
+ e.preventDefault();const input=document.getElementById('chatInput');const msg=input.value.trim();if(!msg)return;
+ addBubble(msg,'user');input.value='';turnCount++;
+ setTimeout(()=>addBubble(demoReply(msg),'bot'),250);
+});
+document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show')}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeChat();closeAccount()}});
+</script>
+</body>
+</html>
