@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087f5b">
+<title>HibberChatLive — Meet. Chat. Connect.</title>
+<meta name="description" content="Discover HibberChatLive, explore our interactive chat demo and learn about our chat experience.">
+<style>
+:root {
+  --green:#087f5b;
+  --dark:#07543e;
+  --light:#e9f8f0;
+  --white:#ffffff;
+  --text:#17382d;
+  --muted:#6d8178;
+  --border:#e4eee8;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#f7fbf8;
+}
+button,input {font:inherit}
+button,a {-webkit-tap-highlight-color:transparent}
+a {text-decoration:none;color:inherit}
+.container {width:min(1120px,92%);margin:auto}
+header {
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:10;
+}
+.nav {
+  min-height:70px;display:flex;align-items:center;
+  justify-content:space-between;gap:12px;
+}
+.brand {font-size:21px;font-weight:800;color:var(--green)}
+.brand span {color:#193c30}
+.nav-link {font-size:13px;font-weight:bold;color:var(--green)}
+.btn {
+  display:inline-flex;justify-content:center;align-items:center;
+  gap:8px;padding:14px 20px;border:0;border-radius:12px;
+  background:var(--green);color:white;font-weight:700;
+  cursor:pointer;transition:transform .15s,background .15s;
+}
+.btn:active {transform:scale(.98)}
+.btn:hover {background:var(--dark)}
+.btn-outline {background:white;color:var(--green);border:1px solid #b7d9c7}
+.btn-outline:hover {background:var(--light);color:var(--dark)}
+.hero {padding:56px 0 35px}
+.hero-grid {
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:36px;align-items:center;
+}
+.eyebrow {
+  display:inline-block;background:#e4f6eb;color:var(--green);
+  border-radius:30px;padding:9px 13px;font-size:12px;font-weight:800;
+}
+h1 {font-size:clamp(35px,5vw,57px);line-height:1.09;letter-spacing:-1.5px;margin:19px 0}
+h1 span {color:var(--green)}
+.hero p {line-height:1.8;color:var(--muted);font-size:16px}
+.actions {display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}
+.trust {font-size:12px!important}
+.chat-card {
+  background:#fff;border:1px solid var(--border);
+  border-radius:22px;overflow:hidden;
+  box-shadow:0 18px 55px #163e2b12;
+}
+.chat-head {
+  background:var(--green);color:white;padding:17px;
+  display:flex;align-items:center;gap:12px;
+}
+.avatar {
+  width:42px;height:42px;border-radius:50%;
+  background:#d9f5e5;color:var(--dark);
+  display:grid;place-items:center;font-weight:800;flex-shrink:0;
+}
+.chat-head strong {display:block;font-size:14px}
+.chat-head small {display:block;margin-top:5px;opacity:.85}
+.demo-tag {
+  margin-left:auto;font-size:10px;font-weight:800;
+  background:#ffffff24;padding:7px;border-radius:8px;
+}
+.chat-body {
+  padding:17px 13px;background:#f1f8f3;
+  min-height:300px;display:flex;flex-direction:column;gap:12px;
+}
+.day-label {
+  align-self:center;background:#fff;border-radius:8px;
+  padding:7px 10px;color:var(--muted);font-size:10px;
+}
+.message {
+  max-width:85%;padding:11px 12px;border-radius:13px;
+  font-size:13px;line-height:1.55;overflow-wrap:anywhere;
+  animation:appear .3s ease;
+}
+.received {background:white;align-self:flex-start;border:1px solid #e8eee9}
+.sent {background:#d8f5e2;align-self:flex-end}
+.msg-time {display:block;text-align:right;color:#718579;font-size:9px;margin-top:5px}
+.typing {font-size:11px;color:var(--muted);min-height:16px}
+@keyframes appear {
+  from {opacity:0;transform:translateY(7px)}
+  to {opacity:1;transform:translateY(0)}
+}
+.chat-compose {
+  display:flex;gap:8px;padding:12px;background:#fff;
+  border-top:1px solid var(--border);
+}
+.chat-compose input {
+  min-width:0;flex:1;border:1px solid var(--border);
+  background:#f8fbf9;border-radius:11px;padding:12px;
+  outline:none;
+}
+.chat-compose input:focus {border-color:var(--green)}
+.send-btn {padding:0 15px;border-radius:11px}
+.notice {
+  padding:10px 14px;background:#fff7df;color:#75591b;
+  font-size:11px;line-height:1.6;border-top:1px solid #f4e9c9;
+}
+section {padding:42px 0}
+.section-heading {text-align:center;margin:0 auto 28px;max-width:650px}
+h2 {font-size:clamp(26px,4vw,36px);margin:0 0 12px}
+.section-heading p,.muted {color:var(--muted);line-height:1.7}
+.features {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.feature,.price-card {
+  background:white;border:1px solid var(--border);
+  border-radius:18px;padding:23px;
+}
+.feature-icon {
+  display:grid;place-items:center;width:46px;height:46px;
+  border-radius:13px;background:var(--light);font-size:22px;
+}
+.feature h3 {font-size:17px;margin:16px 0 8px}
+.feature p {font-size:13px;color:var(--muted);line-height:1.7}
+.price-wrap {max-width:490px;margin:auto}
+.price-card {padding:28px}
+.price-label {font-size:13px;font-weight:bold;color:var(--green)}
+.price {font-size:39px;font-weight:800;margin:14px 0}
+.price small {font-size:13px;font-weight:normal;color:var(--muted)}
+.price-card ul {padding-left:20px;line-height:2;color:#526b5e;font-size:14px}
+.price-card .btn {width:100%;margin-top:10px}
+.disclaimer {font-size:11px;line-height:1.7;color:var(--muted);margin-top:14px}
+.cta {
+  background:#e6f6ed;border-radius:22px;padding:34px 22px;
+  text-align:center;
+}
+.cta p {color:#557467;line-height:1.7}
+footer {background:#fff;border-top:1px solid var(--border);padding:25px 0}
+.footer-inner {
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);
+}
+footer a {color:var(--green);font-weight:bold}
+@media(max-width:760px) {
+  .hero {padding-top:35px}
+  .hero-grid {grid-template-columns:1fr;gap:25px}
+  .features {grid-template-columns:1fr}
+  .chat-body {min-height:275px}
+  .nav {min-height:62px}
+  .brand {font-size:19px}
+  .nav-link {font-size:11px}
+  section {padding:32px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">Hibber<span>ChatLive</span></a>
+    <a class="nav-link" href="#demo">Try Chat Demo ↗</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">YOUR CHAT EXPERIENCE STARTS HERE</span>
+      <h1>Meet. Chat.<br><span>Connect.</span></h1>
+      <p>
+        Discover a simple and friendly chat experience.
+        Explore our interactive demo, see how the conversation
+        works and learn about our available service options.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#demo">Explore Chat Demo →</a>
+        <a class="btn btn-outline" href="#services">View Services</a>
+      </div>
+      <p class="trust">💚 Simple design · Mobile friendly · Easy to explore</p>
+    </div>
+
+    <div class="chat-card" id="demo">
+      <div class="chat-head">
+        <div class="avatar">H</div>
+        <div>
+          <strong>Hibber Chat Preview</strong>
+          <small>Interactive sample conversation</small>
+        </div>
+        <span class="demo-tag">DEMO</span>
+      </div>
+
+      <div class="chat-body" id="chatBody" aria-live="polite">
+        <div class="day-label">SAMPLE CONVERSATION</div>
+      </div>
+
+      <div class="chat-compose">
+        <input id="chatInput" type="text"
+          maxlength="300" placeholder="Type a demo message..."
+          aria-label="Type a demo message">
+        <button class="btn send-btn" id="sendBtn" type="button"
+          aria-label="Send demo message">➤</button>
+      </div>
+      <div class="notice">
+        Demo only: messages are examples or stay in this browser session.
+        No real person or live chat agent is connected.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="section-heading">
+      <h2>A simple way to explore chat</h2>
+      <p>
+        A clean interface designed to help visitors understand
+        the experience before choosing a service.
+      </p>
+    </div>
+    <div class="features">
+      <article class="feature">
+        <div class="feature-icon">💬</div>
+        <h3>Interactive Chat</h3>
+        <p>Try typing and sending messages in our sample chat window.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>A responsive layout that adapts to phones, tablets and computers.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon">🌿</div>
+        <h3>Simple Experience</h3>
+        <p>Explore the design and available service information in one place.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our Service Options</h2>
+      <p>Explore the starting price and request more information before paying.</p>
+    </div>
+    <div class="price-wrap">
+      <div class="price-card">
+        <span class="price-label">CHAT SERVICE</span>
+        <div class="price">TSh 30,000 <small>starting price</small></div>
+        <p class="muted">An introductory service option. Confirm the exact features, terms and availability before purchasing.</p>
+        <ul>
+          <li>Chat experience information</li>
+          <li>Getting-started guidance</li>
+          <li>Service details before payment</li>
+        </ul>
+        <a class="btn" href="https://moxeraagencies.com/register?ref=Mbikiye"
+          target="_blank" rel="noopener noreferrer">
+          Explore Next Step →
+        </a>
+        <p class="disclaimer">
+          This website is a demonstration and information page.
+          The displayed starting price is not a verified quote or guarantee
+          of earnings. Check the provider's terms and total charges first.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to explore?</h2>
+      <p>Try the sample conversation or review the service information.</p>
+      <a href="#demo" class="btn">Try the Demo Now →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong>HibberChatLive</strong><br>Meet. Chat. Connect.</div>
+    <div>
+      <a href="#demo">Chat Demo</a> ·
+      <a href="#services">Services</a>
+    </div>
+    <div>© <span id="year"></span> HibberChatLive</div>
+  </div>
+</footer>
+
+<script>
+const chatBody = document.getElementById("chatBody");
+const chatInput = document.getElementById("chatInput");
+const sendBtn = document.getElementById("sendBtn");
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function addMessage(text, type, time) {
+  const bubble = document.createElement("div");
+  bubble.className = "message " + type;
+
+  const content = document.createElement("div");
+  content.textContent = text;
+
+  const stamp = document.createElement("span");
+  stamp.className = "msg-time";
+  stamp.textContent = time || new Date().toLocaleTimeString([], {
+    hour: "2-digit", minute: "2-digit"
+  });
+
+  bubble.append(content, stamp);
+  chatBody.appendChild(bubble);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function addTyping() {
+  const typing = document.createElement("div");
+  typing.className = "typing";
+  typing.textContent = "Sample message incoming…";
+  chatBody.appendChild(typing);
+  return typing;
+}
+
+const samples = [
+  {type:"received", text:"Hi! Welcome to HibberChatLive 👋"},
+  {type:"sent", text:"Hello! I am exploring the chat demo."},
+  {type:"received", text:"Nice to meet you! Feel free to try sending a message."},
+  {type:"sent", text:"This looks simple and easy to use!"},
+  {type:"received", text:"Thanks for trying our sample conversation 💚"}
+];
+
+let sampleIndex = 0;
+
+function playNextSample() {
+  if (sampleIndex >= samples.length) return;
+
+  const typing = addTyping();
+
+  setTimeout(() => {
+    typing.remove();
+    const item = samples[sampleIndex++];
+    addMessage(item.text, item.type);
+    playNextSample();
+  }, 1500);
+}
+
+function sendMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+
+  addMessage(text, "sent");
+  chatInput.value = "";
+  chatInput.focus();
+}
+
+sendBtn.addEventListener("click", sendMessage);
+
+chatInput.addEventListener("keydown", event => {
+  if (event.key === "Enter") sendMessage();
+});
+
+// The conversation below is scripted demo content, not a real person.
+setTimeout(playNextSample, 700);
+</script>
+
+</body>
+</html>
